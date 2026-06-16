@@ -1,0 +1,87 @@
+@import url('https://googleapis.com');
+/*google font*/
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/*color variables*/
+:root {
+    --primary: #0b132b;
+    --secondary: #1c2541;
+    --accent: #fca311;
+    --light: #f8f9fa;
+    --white: #ffffff;
+}
+
+/*navbar*/
+.navbar {
+    background-color: rgba(11, 19, 43, 0.85);
+    backdrop-filter: blur(10px);
+}
+.navbar-brand {
+    font-size: 2rem;
+}
+.nav-link {
+    color: white !important;
+    margin-left: 10px;
+}
+.nav-link:hover {
+    color: var(--accent) !important;
+}
+
+/*hero section*/
+.hero-section {
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.55),
+            rgba(0,0,0,0.55)
+        ),
+        url("../images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section h1 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+}
+
+/*buttons*/
+.btn-warning {
+    background-color: var(--accent);
+    border: none;
+}
+
+.btn-warning:hover {
+    transform: translateY(-3px);
+    transition: 0.3s;
+}
+
+/* card hover effect */
+.card {
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/*section titles*/
+.section-title {
+    color: var(--primary);
+    font-weight: bold;
+    margin-bottom: 40px;
+}
