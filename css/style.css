@@ -39,7 +39,7 @@ body {
             rgba(0,0,0,0.55),
             rgba(0,0,0,0.55)
         ),
-        url("../images/hero.jpg");
+        url("../images/background-image2.avif");
 
     background-size: cover;
     background-position: center;
@@ -51,12 +51,14 @@ body {
 }
 
 .hero-section h1 {
-    font-size: 4rem;
+    font-size: 4.5rem;
     font-weight: 700;
+    text-shadow: 2px 2px 10px black;
 }
 
 .hero-section p {
     font-size: 1.5rem;
+    text-shadow: 1px 1px 5px black;
 }
 
 /*buttons*/
@@ -84,4 +86,23 @@ body {
     color: var(--primary);
     font-weight: bold;
     margin-bottom: 40px;
+}
+
+.fleet-card{
+    border: none;
+    transition: 0.4s;
+}
+
+.fleet-card:hover{
+    transform: translateY(-10px);
+}
+
+.fleet-card img{
+    height:220px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.badge{
+    font-size: 0.8rem;
 }
