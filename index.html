@@ -60,22 +60,55 @@
 
                     <form class="row g-3">
                         <div class="col-md-3"><input type="text" class="form-control" placeholder="Pickup Location"></div>
-                        <div class="col-md-3"><input type="date" class="form-control"></div>
+                        <div class="col-md-3">
+                            <label for="pickupDate" class="text-muted">. Pickup Date</label>
+                            <input type="date" class="form-control" id="pickupDate" placeholder="Pickup Date">
+                        </div>
+                    
+                        <div class="col-md-3">
+                                <label for="returnDate" class="text-muted">. Return Date</label>
+                                <input type="date" class="form-control" id="returnDate" placeholder="Return Date">
+                            </div>
+                        
+                        
                         <div class="col-md-2"><select class="form-select">
                             <option>All Vehicles</option>
-                            <option>Small</option>
-                            <option>Saloon</option>
+                            <option>Small car</option>
+                            <option>Medium Car</option>
+                            <option>Mid-Size SUV</option>
                             <option>SUV</option>
-                            <option>Luxury</option>
-                            <option>Economy</option>
+                            <option>Pickup Truck</option>
+                            <option>Van</option>
+                            <option>luxury</option>
                         </select>
                     </div>
                     <div class="col-md-1"><button class="btn btn-warning w-100">Go</button></div>
                     </form>
                 </div>
+                
             </div>
-         </section>
+        </div>
+        </section>
 
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center section-title">Vehicle Categories</h2>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card fleet-card h-100 shadow">
+                            <img src="images/mazda demio.jpg" class="card-img-top" alt="Mazda Demio">
+                            <div class="card-body">
+                                <span class="badge bg-light text-dark mb-3">ECONOMY SMALL CAR</span>
+                                <h5 class="fw-bold">Mazda Demio or similar</h5>
+                                <h4 class="text-warning mt-4">Ksh 4,000/day</h4>
+                                <a href="vehicle-details.html" class="btn btn-outline-dark mt-3">View Details</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
