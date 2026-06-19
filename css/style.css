@@ -205,4 +205,24 @@ body {
     font-weight:300;
 }
 
+.testimonial-card{
+    max-width: 800px;
+    margin: auto;
 
+    text-align:center;
+    background: white;
+    padding:40px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+}
+
+.testimonial-card p{
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.testimonial-card h5{
+    color: var(--accent);
+    font-weight: 600;
+}
