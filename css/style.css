@@ -61,6 +61,20 @@ body {
     text-shadow: 1px 1px 5px black;
 }
 
+.find-section{
+    background: var(--primary);
+    color: white;
+}
+
+.find-card{
+    background: #1c2541;
+    color:white;
+}
+
+.find-card label{
+    color: white;
+}
+
 /*buttons*/
 .btn-warning {
     background-color: var(--accent);
@@ -114,7 +128,8 @@ body {
 .feature-box{
     padding: 35px 25px;
     border-radius: 20px;
-    background: white;
+    background: #1c2541;
+    color: white;
     transition: 0.4s;
     height: 100%;
 }
@@ -136,12 +151,17 @@ body {
 }
 
 .service-card{
-    background: white;
+    background: #1c2541;
+    color:white;
     padding: 30px;
     border-radius: 20px;
     text-align: center;
     transition:0.4s;
     height:100%;
+}
+
+.service-card h4{
+    color: white;
 }
 
 .service-card:hover {
@@ -153,4 +173,13 @@ body {
     font-size: 3rem;
     color: var(--accent);
     margin-bottom: 20px;
+}
+
+.vehicle-section{
+    background:#f4f7fb
+}
+
+.services-section{
+    background: var(--primary);
+    color:white;
 }
