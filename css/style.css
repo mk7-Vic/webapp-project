@@ -227,3 +227,20 @@ body {
     color: var(--accent);
     font-weight: 600;
 }
+
+.cta-section{
+    padding: 100px 20px;
+    background: var(--primary);
+    color: white;
+}
+
+.cta-section h2{
+    font-size: 3rem;
+    margin-bottom:20px;
+}
+
+.cta-section p{
+    max-width:700px;
+    margin: auto;
+    margin-bottom: 30px;
+}
