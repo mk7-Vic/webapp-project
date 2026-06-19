@@ -8,3 +8,15 @@ window.addEventListener("scroll", function () {
     }
 });
 
+const today = new Date().toISOString().split("T")[0];
+
+document.getElementById("pickupDate").min = today;
+document.getElementById("returnDate").min = today;
+
+const pickup = document.getElementById("pickupDate");
+const returnDate = document.getElementById("returnDate");
+
+pickup.addEventListener("change", function () {
+    returnDate.min = pickup.value;
+});
+
