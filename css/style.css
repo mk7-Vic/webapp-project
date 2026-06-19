@@ -253,3 +253,62 @@ body {
     margin: auto;
     margin-bottom: 20px;
 }
+
+.brands-section {
+    background: linear-gradient(
+        to bottom,
+        #f8f9fa,
+        #ffffff
+    );
+    padding: 100px 0;
+}
+
+.brands-section .section-title{
+    color: var(--primary);
+}
+
+.brands-section p{
+    color: #6c757d;
+    margin-bottom: 50px;
+}
+
+.brand-logo{
+    max-width: 120px;
+    max-height: 70px;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: 0.4s;
+}
+
+.brand-logo:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.brand-card:hover .brand-logo{
+    filter: grayscale(0);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.brand-card{
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.section-title::after{
+    content:"";
+    display:block;
+    width:80px;
+    height:4px;
+    background:var(--accent);
+    margin:15px auto 0;
+    border-radius:20px;
+}
