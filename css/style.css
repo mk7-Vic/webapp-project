@@ -230,7 +230,14 @@ body {
 
 .cta-section{
     padding: 100px 20px;
-    background: var(--primary);
+    background: 
+    linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)
+    ),
+    url(../images/background-image.jpeg);
+    background-size:cover;
+    background-position:center;
     color: white;
 }
 
@@ -240,7 +247,9 @@ body {
 }
 
 .cta-section p{
+    font-size: 1.2rem;
+
     max-width:700px;
     margin: auto;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
