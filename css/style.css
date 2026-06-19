@@ -98,8 +98,10 @@ body {
 /*section titles*/
 .section-title {
     color: var(--primary);
-    font-weight: bold;
-    margin-bottom: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    position: relative;
 }
 
 .fleet-card{
@@ -281,8 +283,7 @@ body {
 }
 
 .brand-logo:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+    transform: scale(1.1);
 }
 
 .brand-card:hover .brand-logo{
@@ -311,4 +312,69 @@ body {
     background:var(--accent);
     margin:15px auto 0;
     border-radius:20px;
+}
+
+.footer{
+    background: var(--primary);
+    color: #adb5bd;
+}
+
+.footer h3,
+.footer h5{
+    color: white;
+    font-weight: 600;
+}
+
+.footer p{
+    line-height: 1.0;
+}
+
+.footer ul li{
+    margin-bottom: 10px;
+}
+
+.footer a{
+    color:#adb5bd;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer a:hover{
+    color: var(--accent) !important;
+    padding-left: 5px;
+}
+
+.social-links a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    margin-right: 10px;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.social-links a:hover{
+    background: var(--accent);
+    color: var(--primary) !important;
+    transform:translateY(-5px);
+}
+
+.contact-info p{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer hr{
+    border-color: rgba(255,255,255,0.15);
+    margin: 40px 0;
+}
+
+.footer .small{
+    color: #6c757d;
 }
