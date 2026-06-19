@@ -183,3 +183,26 @@ body {
     background: var(--primary);
     color:white;
 }
+
+.stats-section{
+    padding: 100px 0;
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.75)
+    ),
+    url(../images/background-image4.jpg);
+
+    background-size:cover;
+    background-position:center;
+
+    color:white;
+}
+
+.stats-section h2{
+    font-size:3rem;
+    color:var(--accent);
+    font-weight:300;
+}
+
+
