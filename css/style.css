@@ -395,9 +395,24 @@ body {
 .filter-btn{
     margin:5px;
     border-radius:30px;
+    transition: all 0.3s ease;
 }
 
 .navbar .nav-link.active{
     color: var(--accent) !important;
     font-weight: 600;
+}
+
+.vehicle-name{
+    color:var(--primary);
+    font-weight: 700;
+}
+
+.fleet-card .card-body{
+    display:flex;
+    flex-direction:column;
+}
+
+.fleet-card .btn{
+    margin-top:auto;
 }
