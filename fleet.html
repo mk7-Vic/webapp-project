@@ -56,6 +56,7 @@
                 <button class="btn btn-outline-dark filter-btn" data-filter="medium">Medium Cars</button>
                 <button class="btn btn-outline-dark filter-btn" data-filter="suv">SUVs</button>
                 <button class="btn btn-outline-dark filter-btn" data-filter="luxury">Luxury</button>
+                <button class="btn btn-outline-dark filter-btn" data-filter="commercial">Commercial</button>
             </div>
         </section>
 
@@ -69,7 +70,7 @@
                         <h4 class="mt-3 fw-bold vehicle-name">Mazda Demio</h4>
                         <p>Fuel efficient and perfect for city driving</p>
                         <h5 class="text-dark fw-bold">Ksh 4,000/day</h5>
-                        <a href="vehicle-details.html" class="btn btn-warning">View Details</a>
+                        <a href="vehicle-details.html?car=demio" class="btn btn-warning">View Details</a>
                     </div>
                 </div>
             </div>    
@@ -82,20 +83,20 @@
                         <h4 class="mt-3 fw-bold vehicle-name">Nissan Note</h4>
                         <p>Fuel efficient and perfect for city driving</p>
                         <h5 class="text-dark fw-bold">Ksh 4,000/day</h5>
-                        <a href="vehicle-details.html" class="btn btn-warning">View Details</a>
+                        <a href="vehicle-details.html?car=note" class="btn btn-warning">View Details</a>
                     </div>
                 </div>  
             </div>
 
             <div class="col-lg-4 mb-4 vehicle-item small">    
                 <div class="card fleet-card h-100">
-                    <img src="images/honda-vitz.jpeg" class="card-img-top">
+                    <img src="images/toyota-vitz.jpeg" class="card-img-top">
                     <div class="card-body">
                         <span class="badge bg-secondary">Economy Small Car</span>
-                        <h4 class="mt-3 fw-bold vehicle-name">Honda Vitz</h4>
+                        <h4 class="mt-3 fw-bold vehicle-name">Toyota Vitz</h4>
                         <p>Fuel efficient and perfect for city driving</p>
                         <h5 class="text-dark fw-bold">Ksh 4,000/day</h5>
-                        <a href="vehicle-details.html" class="btn btn-warning">View Details</a>
+                        <a href="vehicle-details.html?car=vitz" class="btn btn-warning">View Details</a>
                     </div>
                 </div> 
             </div>
@@ -108,7 +109,7 @@
                         <h4 class="mt-3 fw-bold vehicle-name">Toyota Axio</h4>
                         <p>Reliable and fuel efficient. Ideal for both city driving and longer highway trips.</p>
                         <h5 class="text-dark fw-bold">Ksh 5,000/day</h5>
-                        <a href="vehicle-details.html" class="btn btn-warning">View Details</a>
+                        <a href="vehicle-details.html?car=axio" class="btn btn-warning">View Details</a>
                     </div>
                 </div> 
             </div>
@@ -121,7 +122,7 @@
                         <h4 class="mt-3 fw-bold vehicle-name">Toyota Premio</h4>
                         <p>Reliable and fuel efficient. Ideal for both city driving and longer highway trips.</p>
                         <h5 class="text-dark fw-bold">Ksh 5,000/day</h5>
-                        <a href="vehicle-details.html" class="btn btn-warning">View Details</a>
+                        <a href="vehicle-details.html?car=premio" class="btn btn-warning">View Details</a>
                     </div>
                 </div> 
             </div>
@@ -134,7 +135,7 @@
                         <h4 class="mt-3 fw-bold vehicle-name">Mazda Atenza</h4>
                         <p>Reliable and fuel efficient. Ideal for both city driving and longer highway trips.</p>
                         <h5 class="text-dark fw-bold">Ksh 5,000/day</h5>
-                        <a href="vehicle-details.html" class="btn btn-warning">View Details</a>
+                        <a href="vehicle-details.html?car=atenza" class="btn btn-warning">View Details</a>
                     </div>
                 </div> 
             </div>
@@ -145,11 +146,193 @@
                     <div class="card-body">
                         <span class="badge bg-secondary">Economy Mid-size SUV</span>
                         <h4 class="mt-3 fw-bold vehicle-name">Nissan Xtrail</h4>
-                        <p>Reliable and fuel efficient. Ideal for both city driving and longer highway trips.</p>
+                        <p>The perfect balance of space and power. Smooth handling for the city, with the capability to handle any road.</p>
                         <h5 class="text-dark fw-bold">Ksh 7,500/day</h5>
-                        <a href="vehicle-details.html" class="btn btn-warning">View Details</a>
+                        <a href="vehicle-details.html?car=xtrail" class="btn btn-warning">View Details</a>
                     </div>
                 </div> 
+            </div>
+
+            <div class="col-lg-4 mb-4 vehicle-item suv">
+                <div class="card fleet-card h-100">
+                    <img src="images/CX-5.png" class="card-img-top">
+                    <div class="card-body">
+                        <span class="badge bg-secondary">Standard Mid-Size SUV</span>
+                        <h4 class="mt-3 fw-bold vehicle-name">Mazda CX-5</h4>
+                        <p>Modern SUV with excellent comfort and fuel economy.</p>
+                        <h5 class="text-dark fw-bold">Ksh 8,000/day</h5>
+                        <a href="vehicle-details.html?car=cx5" class="btn btn-warning">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4 vehicle-item suv">
+                <div class="card fleet-card h-100">
+                    <img src="images/forester.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <span class="badge bg-secondary">Standard Mid-Size SUV</span>
+                        <h4 class="mt-3 fw-bold vehicle-name">Subaru Forester</h4>
+                        <p>All-wheel-drive SUV ideal for both city and adventure travel.</p>
+                        <h5 class="text-dark fw-bold">Ksh 8,500/day</h5>
+                        <a href="vehicle-details.html?car=forester" class="btn btn-warning">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4 vehicle-item suv">
+                <div class="card fleet-card h-100">
+                    <img src="images/CX-8.png" class="card-img-top">
+                    <div class="card-body">
+                        <span class="badge bg-secondary">Premium Mid-Size SUV</span>
+                        <h4 class="mt-3 fw-bold vehicle-name">Mazda CX-8</h4>
+                        <p>Modern SUV with excellent comfort and fuel economy.</p>
+                        <h5 class="text-dark fw-bold">Ksh 9,000/day</h5>
+                        <a href="vehicle-details.html?car=cx8" class="btn btn-warning">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4 vehicle-item suv">
+                <div class="card fleet-card h-100">
+                    <img src="images/harrier.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <span class="badge bg-secondary">Premium Mid-Size SUV</span>
+                        <h4 class="mt-3 fw-bold vehicle-name">Toyota Harrier</h4>
+                        <p>Luxury crossover SUV with premium comfort.</p>
+                        <h5 class="text-dark fw-bold">Ksh 9,500/day</h5>
+                        <a href="vehicle-details.html?car=harrier" class="btn btn-warning">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4 vehicle-item suv">
+                <div class="card fleet-card h-100">
+                    <img src="images/TX.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <span class="badge bg-secondary">Premium SUV</span>
+                        <h4 class="mt-3 fw-bold vehicle-name">Toyota Prado TX</h4>
+                        <p>Powerful SUV suitable for safaris and long-distance travel.</p>
+                        <h5 class="text-dark fw-bold">Ksh 13,000/day</h5>
+                        <a href="vehicle-details.html?car=prado" class="btn btn-warning">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4 vehicle-item luxury">
+                <div class="card fleet-card h-100">
+                    <img src="images/v8.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <span class="badge bg-secondary">Luxury SUV</span>
+                        <h4 class="mt-3 fw-bold vehicle-name">Toyota Land Cruiser V8</h4>
+                        <p>Ultimate luxury and performance SUV.</p>
+                        <h5 class="text-dark fw-bold">Ksh 28,000/day</h5>
+                        <a href="vehicle-details.html?car=v8" class="btn btn-warning">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4 vehicle-item commercial">
+                <div class="card fleet-card h-100">
+                    <img src="images/double-cabs.jpeg" class="card-img-top">
+                    <div class="card-body">
+                        <span class="badge bg-secondary">Pickup Truck</span>
+                        <h4 class="mt-3 fw-bold vehicle-name">Toyota Hilux</h4>
+                        <p>Rugged pickup truck built for work and adventure.</p>
+                        <h5 class="text-dark fw-bold">Ksh 14,000/day</h5>
+                        <a href="vehicle-details.html?car=hilux" class="btn btn-warning">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4 vehicle-item commercial">
+                <div class="card fleet-card h-100">
+                    <img src="images/caravan.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <span class="badge bg-secondary">Van</span>
+                        <h4 class="mt-3 fw-bold vehicle-name">Safari Van</h4>
+                        <p>Spacious van perfect for groups and family trips.</p>
+                        <h5 class="text-dark fw-bold">Ksh 22,500/day</h5>
+                        <a href="vehicle-details.html?car=caravan" class="btn btn-warning">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4 vehicle-item medium">
+                <div class="card fleet-card h-100">
+                    <img src="images/c200.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <span class="badge bg-secondary">Premium Medium Car</span>
+                        <h4 class="mt-3 fw-bold vehicle-name">Mercedes Benz C200</h4>
+                        <p>Executive luxury sedan with premium comfort.</p>
+                        <h5 class="text-dark fw-bold">Ksh 18,000/day</h5>
+                        <a href="vehicle-details.html?car=c200" class="btn btn-warning">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4 vehicle-item luxury">
+                <div class="card fleet-card h-100">
+                    <img src="images/x5.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <span class="badge bg-secondary">Luxury SUV</span>
+                        <h4 class="mt-3 fw-bold vehicle-name">BMW X5</h4>
+                        <p>Premium SUV offering luxury and high performance.</p>
+                        <h5 class="text-dark fw-bold">Ksh 40,000/day</h5>
+                        <a href="vehicle-details.html?car=x5" class="btn btn-warning">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4 vehicle-item luxury">
+                <div class="card fleet-card h-100">
+                    <img src="images/G-wagon.png" class="card-img-top">
+                    <div class="card-body">
+                        <span class="badge bg-secondary">Luxury SUV</span>
+                        <h4 class="mt-3 fw-bold vehicle-name">Mercedes G Wagon</h4>
+                        <p>Luxury at it's finest!</p>
+                        <h5 class="text-dark fw-bold">Ksh 60,000/day</h5>
+                        <a href="vehicle-details.html?car=Gwagon" class="btn btn-warning">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4 vehicle-item luxury">
+                <div class="card fleet-card h-100">
+                    <img src="images/s350.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <span class="badge bg-secondary">Luxury Medium Car</span>
+                        <h4 class="mt-3 fw-bold vehicle-name">Mercedes Benz S350</h4>
+                        <p>Executive luxury sedan with premium comfort.</p>
+                        <h5 class="text-dark fw-bold">Ksh 30,000/day</h5>
+                        <a href="vehicle-details.html?car=S350" class="btn btn-warning">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4 vehicle-item medium">
+                <div class="card fleet-card h-100">
+                    <img src="images/golfR.png" class="card-img-top">
+                    <div class="card-body">
+                        <span class="badge bg-secondary">Premium Medium Car</span>
+                        <h4 class="mt-3 fw-bold vehicle-name">Volkswagen Golf R</h4>
+                        <p>Good choice for high speeds and comfortability</p>
+                        <h5 class="text-dark fw-bold">Ksh 18,000/day</h5>
+                        <a href="vehicle-details.html?car=golfR" class="btn btn-warning">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4 vehicle-item luxury">
+                <div class="card fleet-card h-100">
+                    <img src="images/gle.avif" class="card-img-top">
+                    <div class="card-body">
+                        <span class="badge bg-secondary">Luxury SUV</span>
+                        <h4 class="mt-3 fw-bold vehicle-name">Mercedes GLE</h4>
+                        <p>Executive luxury SUV with premium comfort.</p>
+                        <h5 class="text-dark fw-bold">Ksh 48,000/day</h5>
+                        <a href="vehicle-details.html?car=gle" class="btn btn-warning">View Details</a>
+                    </div>
+                </div>
             </div>
 
         </div>
