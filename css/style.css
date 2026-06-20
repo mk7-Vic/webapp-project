@@ -416,3 +416,16 @@ body {
 .fleet-card .btn{
     margin-top:auto;
 }
+
+.requirements-section{
+    background: #f8f9fa;
+}
+
+.requirements-section .card{
+    border-radius:20px;
+}
+
+.requirements-section .list-group-item{
+    font-size: 1.1rem;
+    padding: 15px;
+}
