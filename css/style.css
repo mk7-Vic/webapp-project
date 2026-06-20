@@ -391,3 +391,8 @@ body {
     background-position:center;
     color:white;
 }
+
+.filter-btn{
+    margin:5px;
+    border-radius:30px;
+}
