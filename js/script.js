@@ -72,3 +72,45 @@ filterButtons.forEach(button => {
         });
     });
 });
+
+const searchInput = document.getElementById("vehicleSearch");
+if(searchInput){
+    searchInput.addEventListener("keyup", () => {
+        const searchValue = searchInput.value.toLowerCase();
+
+        vehicleItems.forEach(item => {
+            const vehicleName = item.querySelector(".vehicle-name").innerText.toLowerCase();
+
+            if(vehicleName.includes(searchValue)) {
+                item.style.display='block';
+            }
+            else{
+                item.style.display='none';
+            }
+        })
+    })
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const vehicleContainer = document.getElementById('vehicleContainer');
+    const sortSelect = document.getElementById('sortSelect');
+
+    sortSelect.addEventListener('change', function() {
+        const sortValue = this.value;
+        const items = Array.from(document.querySelectorAll('.vehicle-item'));
+
+        if (sortValue === 'default') {
+            // Sort by the original data-index
+            items.sort((a, b) => parseInt(a.dataset.index) - parseInt(b.dataset.index));
+        } else {
+            items.sort((a, b) => {
+                const priceA = parseInt(a.querySelector('.vehicle-price').dataset.price);
+                const priceB = parseInt(b.querySelector('.vehicle-price').dataset.price);
+                return sortValue === 'low-high' ? priceA - priceB : priceB - priceA;
+            });
+        }
+
+        // Re-attach to the container
+        items.forEach(item => vehicleContainer.appendChild(item));
+    });
+});
