@@ -611,4 +611,26 @@ body {
     margin-top:auto;
 }
 
+.custom-table-container {
+    background-color: #1c2541 !important;
+    border-radius: 15px;
+    padding: 20px;
+}
 
+.custom-table {
+    background-color: #1c2541 !important;
+    color: white !important;
+}
+
+.custom-table td {
+    background-color: #1c2541 !important;
+    color: white !important;
+    border-color: rgba(255, 255, 255, 0.1) !important; /* Subtle border */
+}
+
+
+.custom-table thead th {
+    background-color: #1c2541 !important;
+    color:#fca311 !important;
+    border-bottom: 2px solid #fca311 !important;
+}
