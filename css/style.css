@@ -588,3 +588,27 @@ body {
     color:#333;
     line-height:1.7;
 }
+
+.service-link{
+    text-decoration:none;
+    color:inherit;
+}
+
+.service-detail-card{
+    transition:0.4s;
+    cursor:pointer;
+    flex-direction: column;
+    height: 100%;
+    display: flex;
+}
+
+.service-detail-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.1);
+}
+
+.service-detail-card .btn{
+    margin-top:auto;
+}
+
+
