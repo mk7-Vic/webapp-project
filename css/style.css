@@ -1,4 +1,3 @@
-@import url('https://googleapis.com');
 /*google font*/
 body {
     font-family: 'Poppins', sans-serif;
@@ -490,4 +489,102 @@ body {
 #vehicleSearch{
     border-radius:50px;
     padding:15px 25px;
+}
+
+.about-image{
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+.about-image:hover{
+    transform:scale(1.02);
+}
+
+.mission-section{
+    background:#f8f9fa;
+}
+
+.mission-section .card{
+    border: none;
+    border-radius: 20px;
+    transition: 0.4s;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.mission-section .card:hover{
+    transform: translateY(-10px);
+}
+
+.mission-section h3{
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.booking-form-card{
+    background-color: var(--secondary);
+    border: none;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.contact-form-card{
+    border:none;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.form-control,
+.form-select{
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.form-control:focus,
+.form-select:focus{
+    border-color: var(--accent);
+    box-shadow: 0 0 0 0.25rem rgba(252,163,17,0.25);
+}
+
+.page-banner{
+    text-align:center;
+}
+
+.page-banner h1{
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.page-banner p{
+    color:#e9ecef;
+}
+
+.accordion-item{
+    border:none;
+    margin-bottom:15px;
+    border-radius:15px !important;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.accordion-button{
+    background: var(--secondary);
+    color:white;
+    font-weight:600;
+}
+
+.accordion-button:not(.collapsed){
+    background: var(--primary);
+    color: var(--accent);
+    box-shadow:none;
+}
+
+.accordion-button:focus{
+    box-shadow:none;
+    border:none;
+}
+
+.accordion-body{
+    background:white;
+    color:#333;
+    line-height:1.7;
 }
