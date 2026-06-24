@@ -538,6 +538,7 @@ body {
 .form-select{
     border-radius: 12px;
     padding: 12px;
+    font-weight: 600;
 }
 
 .form-control:focus,
@@ -634,3 +635,5 @@ body {
     color:#fca311 !important;
     border-bottom: 2px solid #fca311 !important;
 }
+
+

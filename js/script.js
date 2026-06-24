@@ -95,6 +95,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const vehicleContainer = document.getElementById('vehicleContainer');
     const sortSelect = document.getElementById('sortSelect');
 
+    if(!vehicleContainer || !sortSelect) return;
+
     sortSelect.addEventListener('change', function() {
         const sortValue = this.value;
         const items = Array.from(document.querySelectorAll('.vehicle-item'));
@@ -113,4 +115,43 @@ document.addEventListener("DOMContentLoaded", () => {
         // Re-attach to the container
         items.forEach(item => vehicleContainer.appendChild(item));
     });
+});
+
+const bookingForm = document.getElementById("bookingForm");
+if(bookingForm) {
+    bookingForm.addEventListener("submit", function(e){
+        
+        const phone = document.getElementById("phone").value;
+
+        if(phone.length >10){
+            e.preventDefault();
+            alert("Enter a valid phone number");
+        }
+    })
+}
+
+const form = document.querySelector("form");
+
+if(form){
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
+        alert("Booking submitted successfully!");
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const params = new URLSearchParams(window.location.search);
+    const service = params.get("service");
+
+    if(service){
+
+        const serviceSelect =
+            document.getElementById("serviceSelect");
+
+        if(serviceSelect){
+            serviceSelect.value = service;
+        }
+    }
+
 });
