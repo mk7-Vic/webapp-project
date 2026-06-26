@@ -681,3 +681,19 @@ body {
     align-items: center;
     margin: auto;
 }
+
+.map-card{
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.35s ease;
+}
+
+.map-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.map-card h4{
+    font-weight: 600;
+}
