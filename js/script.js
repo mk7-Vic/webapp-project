@@ -153,5 +153,67 @@ document.addEventListener("DOMContentLoaded", function () {
             serviceSelect.value = service;
         }
     }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const loadBtn = document.getElementById("loadMoreReviews");
+    const hiddenReviews = document.querySelectorAll(".extra-review");
+
+    if (!loadBtn || hiddenReviews.length === 0) return;
+
+    let currentIndex = 0;
+    const reviewsPerClick = 3;
+
+    loadBtn.addEventListener("click", () => {
+
+        for (
+            let i = currentIndex;
+            i < currentIndex + reviewsPerClick && i < hiddenReviews.length;
+            i++
+        ) {
+            hiddenReviews[i].classList.remove("d-none");
+        }
+
+        currentIndex += reviewsPerClick;
+
+        if (currentIndex >= hiddenReviews.length) {
+            loadBtn.style.display = "none";
+        }
+    });
+});
+
+const helpfulButtons = document.querySelectorAll(".helpful-btn");
+
+helpfulButtons.forEach((button, index) => {
+
+    const saved = localStorage.getItem("review" + index);
+
+    if(saved){
+
+        button.dataset.count = saved;
+        button.querySelector("span").textContent = saved;
+        button.disabled = true;
+        button.innerHTML = `✔ Helpful (<span>${saved}</span>)`;
+
+    }
+
+    button.addEventListener("click", function(){
+
+        let count = Number(this.dataset.count);
+
+        count++;
+
+        this.dataset.count = count;
+
+        this.querySelector("span").textContent = count;
+
+        this.disabled = true;
+
+        this.innerHTML = `✔ Helpful (<span>${count}</span>)`;
+
+        localStorage.setItem("review"+index,count);
+
+    });
 
 });
