@@ -805,3 +805,53 @@ body {
     background-position:center;
     color:white;
 }
+
+.accordion-item{
+    border:none;
+    margin-bottom:20px;
+    border-radius:15px !important;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+.accordion-button{
+    background:var(--secondary);
+    color:white;
+    font-weight:600;
+    padding:20px;
+    box-shadow:none !important;
+}
+
+.accordion-button:not(.collapsed){
+    background:var(--primary);
+    color:white;
+}
+
+.accordion-button:focus{
+    box-shadow:none;
+}
+
+.accordion-button::after{
+    filter:brightness(0) invert(1);
+}
+
+.accordion-body{
+    background:white;
+    padding:25px;
+    font-size:1.05rem;
+    line-height:1.8;
+}
+
+#faqSearch{
+    border-radius:50px;
+    padding:15px 25px;
+}
+
+.input-group-text{
+    border-radius:50px 0 0 50px;
+}
+
+#faqSearch:focus{
+    box-shadow:0 0 15px rgba(252,163,17,.35);
+    border-color:var(--accent);
+}
