@@ -596,11 +596,12 @@ body {
 }
 
 .service-detail-card{
-    transition:0.4s;
+    transition:0.4s ease;
     cursor:pointer;
     flex-direction: column;
     height: 100%;
     display: flex;
+    font-size:2rem;
 }
 
 .service-detail-card:hover{
