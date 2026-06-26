@@ -42,14 +42,14 @@
             </div>
         </nav>
 
-        <section class="py-5 bg-light">
-            <div class="container">
+        <header class="review-banner">
+            <div class="container text-center text-white">
                 <div class="text-center">
                     <br>
-                    <h2 class="section-title">
+                    <h2 class="display-3 fw-bold">
                         What Our Customers Say
                     </h2>
-                    <p class="text-muted">
+                    <p class="lead my-4">
                         Thousands of travellers trust Maina & Sons Car Hire for reliable,
                         affordable and comfortable transport across Kenya.
                     </p>
@@ -69,7 +69,7 @@
                     </h5>
                 </div>
             </div>
-        </section>
+        </header>
 
         <section class="py-5">
             <div class="container">
@@ -866,15 +866,15 @@
                     <div class="col-lg-8">
                         <div class="feature-box p-5">
                             <div class="text-center mb-4">
-                                <h2 class="section-title">
+                                <h2 class="section-title text-white">
                                     Leave Your Review
                                 </h2>
-                                <p class="text-muted">
+                                <p class="">
                                     We'd love to hear about your experience with Maina & Sons Car Hire.
                                 </p>
                             </div>
 
-                            <form>
+                            <form id="reviewForm">
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label class="form-label">
@@ -913,6 +913,10 @@
                                     <button class="btn btn-warning btn-lg">
                                         Submit Review
                                     </button>
+                                </div>
+                                <div id="reviewMessage" class="alert alert-success mt-4 d-none">
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    Thank you for your review! Your feedback has been received successfully.
                                 </div>
                             </form>
                         </div>

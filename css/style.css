@@ -792,3 +792,16 @@ body {
     color:#b9b8b8;
     font-size:.9rem;
 }
+
+.review-banner{
+    padding:150px 0 300px;
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)
+    ),
+    url("../images/background-image5.jpeg");
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
