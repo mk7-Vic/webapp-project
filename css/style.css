@@ -596,12 +596,11 @@ body {
 }
 
 .service-detail-card{
-    transition:0.4s ease;
+    transition:0.4s;
     cursor:pointer;
     flex-direction: column;
     height: 100%;
     display: flex;
-    font-size:2rem;
 }
 
 .service-detail-card:hover{
@@ -637,4 +636,48 @@ body {
     border-bottom: 2px solid #fca311 !important;
 }
 
+.step-card{
+    background: var(--secondary);
+    color: white;
+    border-radius: 20px;
+    padding: 35px 25px;
+    text-align: center;
+    transition: 0.35s ease;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    height: 100%;
+}
 
+.step-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.step-card i{
+    font-size: 3rem;
+    color: var(--accent);
+    margin: 20px 0;
+}
+
+.step-card h4{
+    color: white;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.step-card p{
+    color: rgba(255,255,255,0.85);
+}
+
+.step-number{
+    width: 55px;
+    height: 55px;
+    background: var(--primary);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
