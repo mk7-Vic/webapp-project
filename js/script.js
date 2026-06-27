@@ -148,7 +148,7 @@ if(bookingForm) {
 
         if(dropoff < pickup){
             alert("Your return date cannot be earlier than your pickup date.");
-            return; 
+            return;
         }
 
         // If it passes all the checks above, show success!
@@ -157,22 +157,6 @@ if(bookingForm) {
     });
 }
 
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    const params = new URLSearchParams(window.location.search);
-    const service = params.get("service");
-
-    if(service){
-
-        const serviceSelect =
-            document.getElementById("serviceSelect");
-
-        if(serviceSelect){
-            serviceSelect.value = service;
-        }
-    }
-});
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -288,3 +272,29 @@ if(faqSearch){
 
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    const params = new URLSearchParams(window.location.search);
+    
+    // Grab the values from the URL
+    const service = params.get("service");
+    const location = params.get("location");
+    const car = params.get("car"); // Changed to match your fleet.html links
+
+    // If 'service' is in the URL, select it
+    if(service){
+        const serviceSelect = document.getElementById("serviceSelect");
+        if(serviceSelect) serviceSelect.value = service;
+    }
+
+    // If 'location' is in the URL, select it
+    if(location){
+        const locationSelect = document.getElementById("pickupLocation");
+        if(locationSelect) locationSelect.value = location;
+    }
+
+    // If 'car' is in the URL, select it
+    if(car){
+        const vehicleSelect = document.getElementById("preferredVehicle");
+        if(vehicleSelect) vehicleSelect.value = car;
+    }
+});

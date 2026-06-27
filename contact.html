@@ -122,7 +122,7 @@
 
                                         <div class="mb-3">
                                             <label class="form-label">Pickup Location</label>
-                                            <select class="form-select">
+                                            <select id="pickupLocation" class="form-select">
                                                 <option>Nairobi</option>
                                                 <option>Mombasa</option>
                                                 <option>Kisumu</option>
@@ -131,42 +131,42 @@
                                         </div>
 
                                         <div class="mb-3">
-                                                <label class="form-label">Preferred Vehicle</label>
-                                                <select class="form-select" required>
-                                                    <option value="" disabled selected>Select a vehicle</option>
-                                                    <optgroup label="Economy">
-                                                        <option>Mazda Demio</option>
-                                                        <option>Nissan Note</option>
-                                                        <option>Toyota Vitz</option>
-                                                    </optgroup>
-                                                    <optgroup label="Medium">
-                                                        <option>Toyota Axio</option>
-                                                        <option>Toyota Premio</option>
-                                                        <option>Mazda Atenza</option>
-                                                    </optgroup>
-                                                    <optgroup label="SUVs">
-                                                        <option>Nissan Xtrail</option>
-                                                        <option>Mazda CX-5</option>
-                                                        <option>Subaru Forester</option>
-                                                        <option>Mazda CX-8</option>
-                                                        <option>Toyota Harrier</option>
-                                                        <option>Toyota Prado TX</option>
-                                                    </optgroup>
-                                                    <optgroup label="Luxury">
-                                                        <option>Toyota Land Cruiser V8</option>
-                                                        <option>Mercedes Benz C200</option>
-                                                        <option>BMW X5</option>
-                                                        <option>Mercedes G Wagon</option>
-                                                        <option>Mercedes Benz S350</option>
-                                                        <option>Volkswagen Golf R</option>
-                                                        <option>Mercedes GLE</option>
-                                                    </optgroup>
-                                                    <optgroup label="Commercial">
-                                                        <option>Toyota Hilux</option>
-                                                        <option>Safari Van</option>
-                                                    </optgroup>
-                                                </select>
-                                            </div>
+                                            <label class="form-label">Preferred Vehicle</label>
+                                            <select id="preferredVehicle" class="form-select" required>
+                                                <option value="" disabled selected>Select a vehicle</option>
+                                                <optgroup label="Economy">
+                                                    <option value="demio">Mazda Demio</option>
+                                                    <option value="note">Nissan Note</option>
+                                                    <option value="vitz">Toyota Vitz</option>
+                                                </optgroup>
+                                                <optgroup label="Medium">
+                                                    <option value="axio">Toyota Axio</option>
+                                                    <option value="premio">Toyota Premio</option>
+                                                    <option value="atenza">Mazda Atenza</option>
+                                                </optgroup>
+                                                <optgroup label="SUVs">
+                                                    <option value="xtrail">Nissan Xtrail</option>
+                                                    <option value="cx5">Mazda CX-5</option>
+                                                    <option value="forester">Subaru Forester</option>
+                                                    <option value="cx8">Mazda CX-8</option>
+                                                    <option value="harrier">Toyota Harrier</option>
+                                                    <option value="prado">Toyota Prado TX</option>
+                                                </optgroup>
+                                                <optgroup label="Luxury">
+                                                    <option value="v8">Toyota Land Cruiser V8</option>
+                                                    <option value="c200">Mercedes Benz C200</option>
+                                                    <option value="x5">BMW X5</option>
+                                                    <option value="Gwagon">Mercedes G Wagon</option>
+                                                    <option value="S350">Mercedes Benz S350</option>
+                                                    <option value="golfR">Volkswagen Golf R</option>
+                                                    <option value="gle">Mercedes GLE</option>
+                                                </optgroup>
+                                                <optgroup label="Commercial">
+                                                    <option value="hilux">Toyota Hilux</option>
+                                                    <option value="caravan">Safari Van</option>
+                                                </optgroup>
+                                            </select>
+                                        </div>
                                         </div>
                                     </div>
 
