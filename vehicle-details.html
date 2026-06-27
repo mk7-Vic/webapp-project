@@ -42,6 +42,127 @@
             </div>
         </nav>
 
+        <header class="page-banner">
+            <div class="container text-center">
+                <h1 id="vehicleTitle">Vehicle Details</h1>
+                <p id="vehicleSubtitle">
+                    Find out everything you need to know about this vehicle.
+                </p>
+            </div>
+        </header>
+
+        <section class="py-5">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-6">
+                        <div class="vehicle-image-card">
+                            <img id="vehicleImage" src="" class="img-fluid rounded shadow" alt="Vehicle">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <span class="badge bg-warning text-dark fs-6 mb-3" id="vehicleCategory"></span>
+                        <h2 class="fw-bold mb-3" id="vehicleName"></h2>
+                        <h3 class="text-warning fw-bold mb-4" id="vehiclePrice"></h3>
+                        <p class="lead" id="vehicleDescription"></p>
+                        <hr>
+                        <div class="row">
+                            <div class="col-6 mb-3">
+                                <h6 class="fw-bold">
+                                    <i class="bi bi-gear-fill text-warning"></i> Transmission
+                                </h6>
+                                <p id="vehicleTransmission"></p>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <h6 class="fw-bold">
+                                    <i class="bi bi-fuel-pump-fill text-warning"></i> Fuel Type
+                                </h6>
+                                <p id="vehicleFuel"></p>
+                            </div>
+                            <div class="col-6">
+                                <h6 class="fw-bold">
+                                    <i class="bi bi-people-fill text-warning"></i> Seating
+                                </h6>
+                                <p id="vehicleSeats"></p>
+                            </div>
+                            <div class="col-6">
+                                <h6 class="fw-bold">
+                                    <i class="bi bi-speedometer2 text-warning"></i> Availability
+                                </h6>
+                                <p class="text-success fw-bold">Available Today</p>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="btn btn-warning btn-lg mt-4">
+                            <i class="bi bi-calendar-check"></i> Book This Vehicle
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">Vehicle Features</h2>
+                    <p>Everything you need for a comfortable journey.</p>
+                </div>
+                
+                <div class="row g-4" id="vehicleFeaturesList">
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">Vehicle Specifications</h2>
+                </div>
+                
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped align-middle">
+                        <tbody>
+                            <tr>
+                                <th width="30%">Vehicle</th>
+                                <td id="specName"></td>
+                            </tr>
+                            <tr>
+                                <th>Category</th>
+                                <td id="specCategory"></td>
+                            </tr>
+                            <tr>
+                                <th>Transmission</th>
+                                <td id="specTransmission"></td>
+                            </tr>
+                            <tr>
+                                <th>Fuel Type</th>
+                                <td id="specFuel"></td>
+                            </tr>
+                            <tr>
+                                <th>Seats</th>
+                                <td id="specSeats"></td>
+                            </tr>
+                            <tr>
+                                <th>Daily Rate</th>
+                                <td id="specPrice"></td>
+                            </tr>
+                            <tr>
+                                <th>Availability</th>
+                                <td class="text-success">Available</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">You May Also Like</h2>
+                </div>
+                <div class="row" id="relatedVehicles"></div>
+            </div>
+        </section>
+
 
         <footer class="footer py-5" style="background-color: #0b132b; color: #fca311;">
             <div class="container">
