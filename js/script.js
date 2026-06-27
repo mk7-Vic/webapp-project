@@ -538,3 +538,37 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+function calculateTotal() {
+    const pickupStr = document.getElementById("pickupDate").value;
+    const returnStr = document.getElementById("returnDate").value;
+    const carKey = document.getElementById("preferredVehicle").value;
+    const deliveryFee = parseInt(document.getElementById("deliveryOption").value) || 0;
+    const cleaningFee = document.getElementById("unwashedReturn").checked ? 500 : 0;
+    const totalDisplay = document.getElementById("totalPrice");
+
+    if (pickupStr && returnStr && carKey) {
+        const pickup = new Date(pickupStr);
+        const returnDate = new Date(returnStr);
+        
+        //Calculate days
+        const diffTime = returnDate - pickup;
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        
+        //Only calculate if dates are valid
+        if (diffDays > 0 && vehicleDatabase[carKey]) {
+            // Parse daily rate from "Ksh 4,000" string
+            const dailyRate = parseInt(vehicleDatabase[carKey].price.replace(/[^0-9]/g, ''));
+            const total = (dailyRate * diffDays) + deliveryFee + cleaningFee;
+            totalDisplay.textContent = total.toLocaleString();
+        } else {
+            totalDisplay.textContent = "0";
+        }
+    }
+}
+
+["pickupDate", "returnDate", "preferredVehicle", "deliveryOption", "unwashedReturn"].forEach(id => {
+    const element = document.getElementById(id);
+    if (element) {
+        element.addEventListener("change", calculateTotal);
+    }
+});

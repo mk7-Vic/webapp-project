@@ -101,6 +101,14 @@
                                                 <option>Long-Term Leasing</option>
                                             </select>
                                         </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Delivery Service (Optional)</label>
+                                            <select id="deliveryOption" class="form-select">
+                                                <option value="0">No Delivery (Pick up at office)</option>
+                                                <option value="1500">Delivery within CBD (Ksh 1,500)</option>
+                                                <option value="3000">Airport Delivery (Ksh 3,000)</option>
+                                            </select>
+                                        </div>
                                     </div>
 
                                     <div class="col-md-6">
@@ -166,6 +174,17 @@
                                                     <option value="caravan">Safari Van</option>
                                                 </optgroup>
                                             </select>
+                                        </div>
+                                        <div class="mb-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="unwashedReturn">
+                                                <label class="form-check-label" for="unwashedReturn">
+                                                    Return unwashed (Add Ksh 500 cleaning fee)
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="alert alert-info text-center mb-4">
+                                            <strong>Estimated Total: Ksh <span id="totalPrice">0</span></strong>
                                         </div>
                                         </div>
                                     </div>
