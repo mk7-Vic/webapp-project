@@ -121,15 +121,39 @@ const bookingForm = document.getElementById("bookingForm");
 
 if(bookingForm) {
     bookingForm.addEventListener("submit", function(e){
-        const phone = document.getElementById("phone").value;
+        // Prevent the form from submitting immediately
+        e.preventDefault(); 
 
-        if(phone.length > 10){
-            e.preventDefault();
-            alert("Enter a valid phone number");
-        } else {
-            e.preventDefault();
-            alert("Booking submitted successfully!");
+        // Grab the values from the inputs
+        const phone = document.getElementById("phone").value;
+        const email = document.getElementById("email").value;
+        const pickupDateValue = document.getElementById("pickupDate").value;
+        const returnDateValue = document.getElementById("returnDate").value;
+
+        // 1. Phone Validation (Must be at least 10 digits)
+        if(phone.length < 10){
+            alert("Please enter a valid phone number with at least 10 digits.");
+            return; // Stops the form from submitting
         }
+
+        // 2. Custom Email Validation
+        if(!email.includes("@") || !email.includes(".")){
+            alert("Please enter a valid email address.");
+            return; 
+        }
+
+        // 3. Date Validation (Return date cannot be before pickup date)
+        const pickup = new Date(pickupDateValue);
+        const dropoff = new Date(returnDateValue);
+
+        if(dropoff < pickup){
+            alert("Your return date cannot be earlier than your pickup date.");
+            return; 
+        }
+
+        // If it passes all the checks above, show success!
+        alert("Booking submitted successfully! Our team will contact you shortly.");
+        bookingForm.reset(); // Clears the form fields
     });
 }
 
@@ -263,3 +287,4 @@ if(faqSearch){
     });
 
 }
+
