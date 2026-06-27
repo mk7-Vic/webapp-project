@@ -118,26 +118,21 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const bookingForm = document.getElementById("bookingForm");
+
 if(bookingForm) {
     bookingForm.addEventListener("submit", function(e){
-        
         const phone = document.getElementById("phone").value;
 
-        if(phone.length >10){
+        if(phone.length > 10){
             e.preventDefault();
             alert("Enter a valid phone number");
+        } else {
+            e.preventDefault();
+            alert("Booking submitted successfully!");
         }
-    })
-}
-
-const form = document.querySelector("form");
-
-if(form){
-    form.addEventListener("submit", function(e){
-        e.preventDefault();
-        alert("Booking submitted successfully!");
     });
 }
+
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -215,5 +210,56 @@ helpfulButtons.forEach((button, index) => {
         localStorage.setItem("review"+index,count);
 
     });
-
 });
+
+
+const reviewForm = document.getElementById("reviewForm");
+
+if (reviewForm) {
+
+    reviewForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        const message = document.getElementById("reviewMessage");
+
+        message.classList.remove("d-none");
+
+        reviewForm.reset();
+
+        setTimeout(() => {
+            message.classList.add("d-none");
+        }, 5000);
+
+    });
+
+}
+
+// FAQ Search
+
+const faqSearch = document.getElementById("faqSearch");
+
+if(faqSearch){
+
+    faqSearch.addEventListener("keyup",function(){
+
+        const value=this.value.toLowerCase();
+
+        const items=document.querySelectorAll(".faq-item");
+
+        items.forEach(item=>{
+
+            const text=item.innerText.toLowerCase();
+
+            if(text.includes(value)){
+                item.style.display="block";
+            }
+            else{
+                item.style.display="none";
+            }
+
+        });
+
+    });
+
+}
