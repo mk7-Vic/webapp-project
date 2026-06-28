@@ -57,7 +57,7 @@
                             <h2 class="mb-4">
                                 Reservation Form
                             </h2>
-                            <form>
+                            <form id="bookingForm">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="mb-3">
@@ -190,7 +190,7 @@
                                     </div>
 
                                     <div class="text-center mt-3">
-                                        <button class="btn btn-warning">
+                                        <button type="submit" class="btn btn-warning">
                                             Submit Booking
                                         </button>
                                     </div>
@@ -445,6 +445,22 @@
                 </div>
             </div>
         </section>
+
+        <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header border-0 pb-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center pb-5 pt-0">
+                        <i id="modalIcon" class="bi display-1 mb-3"></i>
+                        <h3 id="modalTitle" class="fw-bold mb-3"></h3>
+                        <p id="modalMessage" class="text-muted fs-5"></p>
+                        <button type="button" class="btn btn-warning px-5 mt-3" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <footer class="footer py-5" style="background-color: #0b132b; color: #fca311;">
             <div class="container">

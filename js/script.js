@@ -8,6 +8,13 @@ window.addEventListener("scroll", function () {
     }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+});
+
 const pickup = document.getElementById("pickupDate");
 const returnDate = document.getElementById("returnDate");
 
@@ -113,44 +120,79 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-const bookingForm = document.getElementById("bookingForm");
+document.addEventListener("DOMContentLoaded", () => {
+    const bookingForm = document.getElementById("bookingForm");
 
-if(bookingForm) {
-    bookingForm.addEventListener("submit", function(e){
-        //Prevent the form from submitting immediately
-        e.preventDefault();
+    if(bookingForm) {
+        bookingForm.addEventListener("submit", function(e){
+            e.preventDefault(); 
+            console.log("Validation script is successfully running!");
 
-        const phone = document.getElementById("phone").value;
-        const email = document.getElementById("email").value;
-        const pickupDateValue = document.getElementById("pickupDate").value;
-        const returnDateValue = document.getElementById("returnDate").value;
+            const phone = document.getElementById("phone").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const pickupDateValue = document.getElementById("pickupDate").value;
+            const returnDateValue = document.getElementById("returnDate").value;
+            
+            const bookingModal = new bootstrap.Modal(document.getElementById('bookingModal'));
+            const modalIcon = document.getElementById('modalIcon');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalMessage = document.getElementById('modalMessage');
 
-        //Phone number must be at least 10 digits
-        if(phone.length < 10){
-            alert("Please enter a valid phone number with at least 10 digits.");
-            return; // Stops the form from submitting
-        }
+            //show errors
+            const showError = (message) => {
+                modalIcon.className = "bi bi-x-circle-fill text-danger display-1 mb-3";
+                modalTitle.textContent = "Oops!";
+                modalMessage.textContent = message;
+                bookingModal.show();
+            };
 
-        if(!email.includes("@") || !email.includes(".")){
-            alert("Please enter a valid email address.");
-            return;
-        }
+            //phone validation
+            const validCharsRegex = /^\+?[\d\s\-]+$/;
+            if(!validCharsRegex.test(phone)){
+                showError("Phone numbers cannot contain letters. Please use only numbers, spaces, or dashes.");
+                return;
+            }
 
-        //Return date cannot be before pickup date
-        const pickup = new Date(pickupDateValue);
-        const dropoff = new Date(returnDateValue);
+            //check length
+            const cleanPhone = phone.replace(/[\s-]/g, '');
+            if(cleanPhone.length < 10){
+                showError("Please enter a valid phone number with at least 10 digits.");
+                return;
+            }
 
-        if(dropoff < pickup){
-            alert("Your return date cannot be earlier than your pickup date.");
-            return;
-        }
+            //email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if(!emailRegex.test(email)){
+                showError("Please enter a valid email address (e.g., name@example.com).");
+                return;
+            }
 
-        //If it passes all the checks above, show success
-        alert("Booking submitted successfully! Our team will contact you shortly.");
-        bookingForm.reset(); //Clears the form fields
-    });
-}
+            //Date validation
+            if(!pickupDateValue || !returnDateValue) {
+                showError("Please select both pickup and return dates.");
+                return;
+            }
 
+            const pickup = new Date(pickupDateValue);
+            const dropoff = new Date(returnDateValue);
+
+            if(dropoff <= pickup){
+                showError("Your return date must be at least one day after your pickup date.");
+                return;
+            }
+
+            // Success state
+            modalIcon.className = "bi bi-check-circle-fill text-success display-1 mb-3";
+            modalTitle.textContent = "Booking Confirmed!";
+            modalMessage.textContent = "Your reservation has been submitted successfully. Our team will contact you shortly to finalize details.";
+            bookingModal.show();
+            
+            bookingForm.reset();
+            const totalPriceDisplay = document.getElementById("totalPrice");
+            if(totalPriceDisplay) totalPriceDisplay.textContent = "0";
+        });
+    }
+});
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -181,60 +223,39 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const helpfulButtons = document.querySelectorAll(".helpful-btn");
-
 helpfulButtons.forEach((button, index) => {
-
     const saved = localStorage.getItem("review" + index);
 
     if(saved){
-
         button.dataset.count = saved;
         button.querySelector("span").textContent = saved;
         button.disabled = true;
         button.innerHTML = `✔ Helpful (<span>${saved}</span>)`;
-
     }
 
     button.addEventListener("click", function(){
-
         let count = Number(this.dataset.count);
-
         count++;
-
         this.dataset.count = count;
-
         this.querySelector("span").textContent = count;
-
         this.disabled = true;
-
         this.innerHTML = `✔ Helpful (<span>${count}</span>)`;
-
         localStorage.setItem("review"+index,count);
-
     });
 });
 
 
 const reviewForm = document.getElementById("reviewForm");
-
 if (reviewForm) {
-
     reviewForm.addEventListener("submit", function (e) {
-
         e.preventDefault();
-
         const message = document.getElementById("reviewMessage");
-
         message.classList.remove("d-none");
-
         reviewForm.reset();
-
         setTimeout(() => {
             message.classList.add("d-none");
         }, 5000);
-
     });
-
 }
 
 // FAQ Search
@@ -538,6 +559,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+
 function calculateTotal() {
     const pickupStr = document.getElementById("pickupDate").value;
     const returnStr = document.getElementById("returnDate").value;
@@ -556,7 +578,6 @@ function calculateTotal() {
         
         //Only calculate if dates are valid
         if (diffDays > 0 && vehicleDatabase[carKey]) {
-            // Parse daily rate from "Ksh 4,000" string
             const dailyRate = parseInt(vehicleDatabase[carKey].price.replace(/[^0-9]/g, ''));
             const total = (dailyRate * diffDays) + deliveryFee + cleaningFee;
             totalDisplay.textContent = total.toLocaleString();
