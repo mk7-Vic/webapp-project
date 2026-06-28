@@ -593,3 +593,21 @@ function calculateTotal() {
         element.addEventListener("change", calculateTotal);
     }
 });
+
+function goBack() {
+    window.history.back();
+}
+
+const themeToggle = document.getElementById("themeToggle");
+const themeIcon = document.getElementById("themeIcon");
+
+themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    
+    // Toggle Icon
+    if(document.body.classList.contains("dark-mode")){
+        themeIcon.classList.replace("bi-moon-fill", "bi-sun-fill");
+    } else {
+        themeIcon.classList.replace("bi-sun-fill", "bi-moon-fill");
+    }
+});

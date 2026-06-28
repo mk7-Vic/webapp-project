@@ -2,6 +2,8 @@
 body {
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
+    padding-top: 76px;
+    animation: fadeIn 0.5s ease-in-out;
 }
 
 /*color variables*/
@@ -854,4 +856,89 @@ body {
 #faqSearch:focus{
     box-shadow:0 0 15px rgba(252,163,17,.35);
     border-color:var(--accent);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #fca311 !important;
+    border-radius: 50%;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .d-flex.gap {
+        flex-direction: column;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.dark-mode {
+    background-color: #0b132b;
+    color: white;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6,
+.dark-mode p {
+    color: #ffffff !important;
+}
+
+.dark-mode .section-title {
+    color: #ffffff !important;
+}
+
+.dark-mode .text-muted {
+    color: #adb5bd !important;
+}
+
+.dark-mode .bg-light {
+    background-color: #1c2541 !important;
+}
+
+.dark-mode .card, 
+.dark-mode .feature-box, 
+.dark-mode .accordion-body {
+    background-color: #0b132b !important;
+    border: 1px solid #2d3436;
+}
+
+.dark-mode .table {
+    color: white !important;
+}
+
+.dark-mode section.py-5,
+.dark-mode .bg-light,
+.dark-mode .bg-white {
+    background-color: #0b132b !important;
+    color: white !important;
+}
+.dark-mode .cta-card,
+.dark-mode .footer {
+    background-color: #1c2541 !important;
+    border: 1px solid #2d3436;
+}
+
+.dark-mode .custom-table-container {
+    background-color: #1c2541 !important;
+}
+
+.dark-mode .feature-box i,
+.dark-mode .service-card i {
+    color: #fca311 !important;
+}
+
+.dark-mode .card-body p,
+.dark-mode .card-body h4,
+.dark-mode .card-body h5,
+.dark-mode .step-card p,
+.dark-mode .step-card h4 {
+    color: white !important;
 }
